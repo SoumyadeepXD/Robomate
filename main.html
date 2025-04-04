@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robomate - Your Challenge, Our Innovation!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eae0c8;
+            color: #002f6c;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #002f6c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        .navbar {
+            display: none; /* Hide the navbar for mobile */
+            flex-direction: column;
+            background-color: #001a3d;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            padding-top: 20px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #002f6c;
+        }
+        .hamburger {
+            display: block;
+            background-color: #002f6c;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+        .navbar.active {
+            transform: translateX(0);
+        }
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .cta-button {
+            background-color: #002f6c;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #001a3d;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #002f6c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .hamburger {
+                display: none;
+            }
+            .navbar {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                transform: translateX(0);
+                height: auto;
+                width: 100%;
+                background-color: #001a3d;
+                justify-content: center;
+                padding: 10px 0;
+            }
+            .navbar a {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="hamburger" onclick="toggleNavbar()">☰</button>
+    <div class="navbar" id="navbar">
+        <a href="#course">Course</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#goal">Our Goal</a>
+        <a href="#socials">Socials</a>
+        <a href="#login">Login</a>
+    </div>
+    <div class="header">
+        <h1>Robomate</h1>
+        <p>Your Challenge, Our Innovation!</p>
+    </div>
+    <div id="course" class="section">
+        <h2>Course</h2>
+        <p>Explore our wide range of robotics courses designed to empower learners of all levels.</p>
+    </div>
+    <div id="menu" class="section">
+        <h2>Menu</h2>
+        <p>Discover our offerings, from educational tools to advanced robotics solutions.</p>
+    </div>
+    <div id="about" class="section">
+        <h2>About</h2>
+        <p>Robomate is dedicated to revolutionizing education and infrastructure with cutting-edge robotics.</p>
+    </div>
+    <div id="goal" class="section">
+        <h2>Our Goal</h2>
+        <p>Our mission is to innovate and inspire through robotics, transforming the way we learn and build.</p>
+    </div>
+    <div id="socials" class="section">
+        <h2>Socials</h2>
+        <p>Follow us on social media to stay updated with the latest news and innovations.</p>
+    </div>
+    <div id="login" class="section">
+        <h2>Login</h2>
+        <p>Access your personalized dashboard by logging into your account.</p>
+        <button class="cta-button">Login</button>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Robomate. All rights reserved.</p>
+    </div>
+    <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
